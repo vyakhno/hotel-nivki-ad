@@ -1,0 +1,56 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+    }
+    #bf-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(10, 8, 6, 0.78) 0%, rgba(10, 8, 6, 0) 50%);
+    }
+    #bf-block {
+      position: absolute;
+      left: 160px;
+      bottom: 160px;
+      color: #f5eee4;
+    }
+    #bf-line {
+      width: 90px;
+      height: 3px;
+      background: #c6b08c;
+      transform-origin: left center;
+    }
+    #bf-title {
+      margin-top: 26px;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 76px;
+      line-height: 1.05;
+    }
+    #bf-sub {
+      margin-top: 18px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 34px;
+      color: #c6b08c;
+    }
+  </style>
+  <div data-hf-id="hf-5vh4" id="root" data-composition-id="breakfast" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-v0pk" id="bf-scrim"></div>
+    <div data-hf-id="hf-1skt" id="bf-block">
+      <div data-hf-id="hf-umts" id="bf-line"></div>
+      <div data-hf-id="hf-opz7" id="bf-title">Доставка в номер<br data-hf-id="hf-x5px" />— безкоштовно</div>
+      <div data-hf-id="hf-rwv3" id="bf-sub">Сніданки щодня з 08:00</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#bf-scrim", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "sine.out" }, 0);
+    tl.fromTo("#bf-line", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0.2);
+    tl.fromTo("#bf-title", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 0.35);
+    tl.fromTo("#bf-sub", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.9);
+    tl.to("#bf-block, #bf-scrim", { opacity: 0, duration: 0.5, ease: "sine.in" }, 3.7);
+    window.__timelines["breakfast"] = tl;
+  </script>
+</template>

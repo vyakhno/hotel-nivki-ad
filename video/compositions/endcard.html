@@ -1,0 +1,89 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+    }
+    #ec-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 70% at 50% 45%, #2a1f17 0%, #120e0b 70%);
+    }
+    #ec-logo {
+      position: absolute;
+      left: 50%;
+      top: 170px;
+      width: 520px;
+      height: auto;
+      margin-left: -260px;
+    }
+    #ec-slogan {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 440px;
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: 64px;
+      color: #f5eee4;
+    }
+    #ec-rule {
+      position: absolute;
+      left: 50%;
+      top: 560px;
+      width: 120px;
+      height: 2px;
+      margin-left: -60px;
+      background: #c6b08c;
+    }
+    #ec-info {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 610px;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-size: 34px;
+      line-height: 1.6;
+      color: #f5eee4;
+    }
+    #ec-info b {
+      color: #c6b08c;
+      font-weight: 700;
+    }
+    #ec-resto {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 850px;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-size: 28px;
+      color: #c6b08c;
+      letter-spacing: 0.04em;
+    }
+  </style>
+  <div data-hf-id="hf-32ii" id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-6v8j" id="ec-bg"></div>
+    <img data-hf-id="hf-jwpy" id="ec-logo" src="assets/brand/hotel-logo.svg" alt="Готель «Нивки»" />
+    <div data-hf-id="hf-fmbd" id="ec-slogan">Відчуйте себе як вдома</div>
+    <div data-hf-id="hf-w1gg" id="ec-rule"></div>
+    <div data-hf-id="hf-74a2" id="ec-info">
+      <div data-hf-id="hf-ixyg"><b data-hf-id="hf-vfgm">8,3</b> на Booking · вул. Мрії, 16Е · м. «Нивки»</div>
+      <div data-hf-id="hf-53io"><b data-hf-id="hf-xj1t">+38 (044) 233-72-55</b> · hotel-nivki.kiev.ua</div>
+    </div>
+    <div data-hf-id="hf-74l6" id="ec-resto">Ресторан «Букет Côtelette» щодня 08:00–21:00 · безкоштовна парковка</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ec-bg", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "sine.inOut" }, 0);
+    // "Готель «Нивки»" is spoken at 0.0 s into this scene; "Відчуйте себе як вдома" at 1.9 s.
+    tl.fromTo("#ec-logo", { opacity: 0, y: 30, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: "power3.out" }, 0.3);
+    tl.fromTo("#ec-slogan", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 1.9);
+    tl.fromTo("#ec-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 2.8);
+    tl.fromTo("#ec-info", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 3.1);
+    tl.fromTo("#ec-resto", { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "sine.out" }, 3.8);
+    window.__timelines["endcard"] = tl;
+  </script>
+</template>

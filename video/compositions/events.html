@@ -1,0 +1,48 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+    }
+    #ev-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 8, 6, 0.8) 0%, rgba(10, 8, 6, 0) 50%);
+    }
+    #ev-block {
+      position: absolute;
+      left: 160px;
+      bottom: 150px;
+      color: #f5eee4;
+    }
+    #ev-title {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 1.05;
+    }
+    #ev-stats {
+      margin-top: 22px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 34px;
+      color: #c6b08c;
+    }
+  </style>
+  <div data-hf-id="hf-g3ly" id="root" data-composition-id="events" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-jml5" id="ev-scrim"></div>
+    <div data-hf-id="hf-ofe8" id="ev-block">
+      <div data-hf-id="hf-2ntv" id="ev-title">Свята, банкети, конференції</div>
+      <div data-hf-id="hf-lsj6" id="ev-stats">2 банкетні зали · 3 конференц-зали · до 310 гостей</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ev-scrim", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "sine.out" }, 0);
+    tl.fromTo("#ev-title", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 0.2);
+    // "до трьохсот гостей" is spoken at 3.3 s into this scene.
+    tl.fromTo("#ev-stats", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 3.2);
+    tl.to("#ev-block, #ev-scrim", { opacity: 0, duration: 0.5, ease: "sine.in" }, 5.8);
+    window.__timelines["events"] = tl;
+  </script>
+</template>

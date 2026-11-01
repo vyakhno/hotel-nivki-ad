@@ -1,0 +1,49 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+    }
+    #intro-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 8, 6, 0.75) 0%, rgba(10, 8, 6, 0) 45%);
+    }
+    #intro-block {
+      position: absolute;
+      left: 160px;
+      bottom: 150px;
+      color: #f5eee4;
+    }
+    #intro-kicker {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 34px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #c6b08c;
+    }
+    #intro-title {
+      margin-top: 18px;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 104px;
+      line-height: 1;
+    }
+  </style>
+  <div data-hf-id="hf-ypfn" id="root" data-composition-id="intro" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-mjmg" id="intro-scrim"></div>
+    <div data-hf-id="hf-p9il" id="intro-block">
+      <div data-hf-id="hf-puhk" id="intro-kicker">Київ · Нивки</div>
+      <div data-hf-id="hf-g926" id="intro-title">Готель «Нивки»</div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#intro-scrim", { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "sine.out" }, 0);
+    tl.fromTo("#intro-kicker", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 0.2);
+    tl.fromTo("#intro-title", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" }, 1.4);
+    tl.to("#intro-block, #intro-scrim", { opacity: 0, duration: 0.6, ease: "sine.in" }, 4.3);
+    window.__timelines["intro"] = tl;
+  </script>
+</template>

@@ -1,0 +1,12 @@
+# Downloaded source photos (Booking, Instagram, hotel site) stay local
+/sources/
+/review/
+/clips/
+check.json
+hotel-nivki-ad.mp4
+tools/bin/
+node_modules/
+video/.hyperframes/
+video/.thumbnails/
+video/.waveform-cache/
+video/renders/

@@ -1,0 +1,69 @@
+<template>
+  <style>
+    #root {
+      position: absolute;
+      inset: 0;
+    }
+    #rc-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(10, 8, 6, 0.8) 0%, rgba(10, 8, 6, 0.1) 55%);
+    }
+    #rc-badge {
+      position: absolute;
+      left: 160px;
+      top: 250px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 34px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #c6b08c;
+    }
+    #rc-num {
+      position: absolute;
+      left: 150px;
+      top: 300px;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 300px;
+      line-height: 1;
+      color: #f5eee4;
+      font-variant-numeric: tabular-nums;
+    }
+    #rc-label {
+      position: absolute;
+      left: 160px;
+      top: 640px;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 1.1;
+      color: #f5eee4;
+    }
+  </style>
+  <div data-hf-id="hf-quda" id="root" data-composition-id="record" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-mugd" id="rc-scrim"></div>
+    <div data-hf-id="hf-2n42" id="rc-badge">Рекорд України</div>
+    <div data-hf-id="hf-tdgu" id="rc-num">100</div>
+    <div data-hf-id="hf-pflj" id="rc-label">видів авторських<br data-hf-id="hf-x5px" />котлет</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const num = document.querySelector("#rc-num");
+    const counter = { v: 0 };
+    tl.fromTo("#rc-scrim", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "sine.out" }, 0);
+    // "Рекордсмен України" is spoken at 0.1 s into this scene; "сто видів" at 2.7 s.
+    tl.fromTo("#rc-badge", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.2);
+    tl.fromTo("#rc-num", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "sine.out" }, 1.0);
+    tl.fromTo(
+      counter,
+      { v: 0 },
+      { v: 100, duration: 1.7, ease: "power2.out", onUpdate: () => (num.textContent = Math.round(counter.v)) },
+      1.0,
+    );
+    tl.fromTo("#rc-label", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 2.6);
+    tl.to("#rc-badge, #rc-num, #rc-label, #rc-scrim", { opacity: 0, duration: 0.5, ease: "sine.in" }, 4.6);
+    window.__timelines["record"] = tl;
+  </script>
+</template>

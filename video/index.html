@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=block&subset=cyrillic" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --ground: #120e0b;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--ground);
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: var(--ground);
+      }
+      video.shot {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1920px;
+        height: 1080px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-gfzj" id="root" data-composition-id="main" data-start="0" data-duration="49" data-width="1920" data-height="1080">
+      <!-- Footage: Grok Imagine animations of the hotel's and restaurant's own photos. Each shot overlaps the next by 0.5 s for a crossfade. -->
+      <video data-hf-id="hf-yl8a" id="v-alley" class="clip shot" src="assets/clips/01-alley.mp4" data-start="0" data-duration="3.4" data-track-index="1" muted playsinline style="z-index: 1"></video>
+      <video data-hf-id="hf-80sg" id="v-facade" class="clip shot" src="assets/clips/02-facade.mp4" data-start="2.9" data-duration="3.6" data-track-index="2" muted playsinline style="z-index: 2"></video>
+      <video data-hf-id="hf-1v32" id="v-room" class="clip shot" src="assets/clips/03-room.mp4" data-start="6.0" data-duration="4.9" data-track-index="1" muted playsinline style="z-index: 3"></video>
+      <video data-hf-id="hf-0oag" id="v-bath" class="clip shot" src="assets/clips/04-bath.mp4" data-start="10.4" data-duration="4.5" data-track-index="2" muted playsinline style="z-index: 4"></video>
+      <video data-hf-id="hf-gfrh" id="v-breakfast" class="clip shot" src="assets/clips/05-breakfast.mp4" data-start="14.4" data-duration="5.0" data-track-index="1" muted playsinline style="z-index: 5"></video>
+      <video data-hf-id="hf-uk9u" id="v-firehall" class="clip shot" src="assets/clips/06-firehall.mp4" data-start="19.1" data-duration="3.8" data-track-index="2" muted playsinline style="z-index: 6"></video>
+      <video data-hf-id="hf-mj41" id="v-torch" class="clip shot" src="assets/clips/07-torch.mp4" data-start="22.4" data-duration="3.1" data-track-index="1" muted playsinline style="z-index: 7"></video>
+      <video data-hf-id="hf-6n4b" id="v-cutlet" class="clip shot" src="assets/clips/12-cutlet.mp4" data-start="25.0" data-duration="2.9" data-track-index="2" muted playsinline style="z-index: 8"></video>
+      <video data-hf-id="hf-ncrh" id="v-bartender" class="clip shot" src="assets/clips/08-bartender.mp4" data-start="27.4" data-duration="2.4" data-track-index="1" muted playsinline style="z-index: 9"></video>
+      <video data-hf-id="hf-0vg5" id="v-banquet" class="clip shot" src="assets/clips/10-banquet.mp4" data-start="29.3" data-duration="3.8" data-track-index="2" muted playsinline style="z-index: 10"></video>
+      <video data-hf-id="hf-kicp" id="v-hall" class="clip shot" src="assets/clips/13-hall.mp4" data-start="32.6" data-duration="3.6" data-track-index="1" muted playsinline style="z-index: 11"></video>
+      <video data-hf-id="hf-prt2" id="v-couple" class="clip shot" src="assets/clips/09-couple.mp4" data-start="35.7" data-duration="2.9" data-track-index="2" muted playsinline style="z-index: 12"></video>
+      <video data-hf-id="hf-v493" id="v-romantic" class="clip shot" src="assets/clips/11-romantic.mp4" data-start="38.1" data-duration="2.8" data-track-index="1" muted playsinline style="z-index: 13"></video>
+
+      <!-- Text scenes -->
+      <div data-hf-id="hf-4u9m" id="intro" data-composition-id="intro" data-composition-src="compositions/intro.html" data-start="0.8" data-duration="5.0" data-track-index="3" data-width="1920" data-height="1080" style="z-index: 20"></div>
+      <div data-hf-id="hf-1snz" id="breakfast" data-composition-id="breakfast" data-composition-src="compositions/breakfast.html" data-start="14.9" data-duration="4.3" data-track-index="3" data-width="1920" data-height="1080" style="z-index: 20"></div>
+      <div data-hf-id="hf-x9r6" id="resto" data-composition-id="resto" data-composition-src="compositions/resto.html" data-start="19.5" data-duration="3.2" data-track-index="3" data-width="1920" data-height="1080" style="z-index: 20"></div>
+      <div data-hf-id="hf-gbg5" id="record" data-composition-id="record" data-composition-src="compositions/record.html" data-start="22.6" data-duration="5.2" data-track-index="3" data-width="1920" data-height="1080" style="z-index: 20"></div>
+      <div data-hf-id="hf-6xit" id="events" data-composition-id="events" data-composition-src="compositions/events.html" data-start="29.6" data-duration="6.4" data-track-index="3" data-width="1920" data-height="1080" style="z-index: 20"></div>
+      <div data-hf-id="hf-ihdi" id="endcard" data-composition-id="endcard" data-composition-src="compositions/endcard.html" data-start="40.4" data-duration="8.6" data-track-index="4" data-width="1920" data-height="1080" style="z-index: 30"></div>
+
+      <!-- Sound: Gemini voice (Sulafat, Ukrainian) and a Lyria lounge bed -->
+      <audio data-hf-id="hf-hodt" id="vo" class="clip" src="assets/audio/vo.wav" data-start="1.0" data-duration="45.2" data-track-index="5" data-volume="1"></audio>
+      <audio data-hf-id="hf-xbd7" id="music" class="clip" src="assets/audio/music-lyria.wav" data-start="0" data-duration="49" data-track-index="6" data-volume="0.16"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      // Crossfade each shot over the one under it.
+      [
+        ["#v-facade", 2.9], ["#v-room", 6.0], ["#v-bath", 10.4], ["#v-breakfast", 14.4],
+        ["#v-firehall", 19.1], ["#v-torch", 22.4], ["#v-cutlet", 25.0], ["#v-bartender", 27.4],
+        ["#v-banquet", 29.3], ["#v-hall", 32.6], ["#v-couple", 35.7], ["#v-romantic", 38.1],
+      ].forEach(([id, t]) => tl.fromTo(id, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "sine.inOut" }, t));
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
